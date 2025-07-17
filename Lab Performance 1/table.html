@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Management Table</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        padding: 20px;
+    }
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    
+    td {
+        text-align: center;
+    }
+    
+    .order-type {
+        font-weight: bold;
+        color: #333;
+    }
+    
+    .amount {
+        color: #2196F3;
+        font-weight: bold;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+</style>
+</head>
+<body>
+<h1>Order Management System</h1>
+<table>
+<tr>
+<th>Order Type</th>
+<th>Order No</th>
+<th>Amount</th>
+<th colspan="2">Customer Name</th>
+</tr>
+<tr>
+<td rowspan="2" class="order-type">Pickup</td>
+<td>1</td>
+<td class="amount">$20</td>
+<td>Anil</td>
+<td>Hos.</td>
+</tr>
+<tr>
+<td>2</td>
+<td class="amount">$15</td>
+<td>Ridita</td>
+<td>Bos</td>
+</tr>
+<tr>
+<td class="order-type">Delivery</td>
+<td>3</td>
+<td class="amount">$21</td>
+<td rowspan="3">Anil</td>
+<td rowspan="3">Hos.</td>
+</tr>
+<tr>
+<td rowspan="2" class="order-type">Pickup</td>
+<td rowspan="2">4</td>
+<td class="amount">$6</td>
+</tr>
+<tr>
+<td class="amount">$4</td>
+</tr>
+</table>
+</body>
+</html>

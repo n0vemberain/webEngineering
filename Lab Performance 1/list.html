@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class20-05-2025</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #f5f1eb 0%, #e8ddd4 100%);
+        min-height: 100vh;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    h1 {
+        color: #8B4513;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        font-style: italic;
+    }
+
+    hr {
+        border: none;
+        height: 3px;
+        background: linear-gradient(90deg, #8B4513, #D2691E, #8B4513);
+        margin-bottom: 30px;
+        border-radius: 2px;
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        min-height: 80vh;
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .menu-section {
+        flex: 1;
+        background: linear-gradient(135deg, #d6a8a8 0%, #c49a9a 100%);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .image-section {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .image-container {
+        width: 85%;
+        height: 85%;
+        border-radius: 45%;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        border: 8px solid rgba(255,255,255,0.8);
+        transition: transform 0.3s ease;
+        background: linear-gradient(135deg, #8B4513, #D2691E);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-container:hover {
+        transform: scale(1.05);
+    }
+
+    .coffee-placeholder {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #6F4E37 0%, #8B4513 50%, #D2691E 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 4rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    ol {
+        padding-left: 20px;
+    }
+
+    ol > li {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #4a3428;
+        margin-bottom: 20px;
+        padding: 10px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+        border-left: 4px solid #8B4513;
+        transition: all 0.3s ease;
+    }
+
+    ol > li:hover {
+        background: rgba(255,255,255,0.2);
+        transform: translateX(5px);
+    }
+
+    ul {
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    ul li {
+        font-size: 1.1rem;
+        color: #5d4037;
+        margin-bottom: 8px;
+        padding: 5px 10px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+        background: rgba(255,255,255,0.15);
+    }
+
+    ul li i, li i {
+        color: #6d4c41;
+    }
+
+    /* Nested lists styling */
+    ul ul {
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+
+    ul ul li {
+        font-size: 1rem;
+        color: #6d4c41;
+        background: rgba(255,255,255,0.02);
+    }
+
+    /* Ordered list inside unordered list */
+    ul ol {
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+
+    ul ol li {
+        font-size: 1rem;
+        color: #6d4c41;
+        background: rgba(255,255,255,0.02);
+    }
+
+    /* Emoji styling */
+    .emoji {
+        font-size: 1.2em;
+        margin-left: 5px;
+        filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        .menu-section {
+            padding: 30px 20px;
+        }
+        
+        .image-container {
+            width: 70%;
+            height: 300px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 2rem;
+        }
+        
+        ol > li {
+            font-size: 1.1rem;
+        }
+        
+        ul li {
+            font-size: 1rem;
+        }
+    }
+</style>
+</head>
+<body>
+<h1><i>Coffee Shop</i></h1>
+<hr>
+
+<div class="container">
+<div class="menu-section">
+<ol type="I">
+<li>Coffee <span class="emoji">&#9749;</span>
+<ul>
+<li><i>Cappuccinos</i>
+<ul style="list-style-type:disc;">
+ <li> With foam?</li>
+ <li> With more sugar?</li>
+ </ul>
+ </li>
+ <li><i>Expresso</i>
+ <ol type="I" start="4">
+<li>Robista</li>
+<li>Bourbon</li>
+<li>Arabica</li>
+</ol>
+</li>
+<li><i>Americanos</i></li>
+</ul>
+</li>
+<br><br>
+<li>Cakes <span class="emoji">&#127856;</span>
+<ul><i>
+<li>Chocolate</li>
+<li>Vanilla</li>
+<li>Red Velvet</li></i>
+</ul>
+</li>
+<br><br>
+<li>Fruit salad
+<ul><i>
+<li>Apple <span class="emoji">&#127822;</span></li>
+<li>StrawBerry <span class="emoji">&#127827;</span></li>
+<li>Water Mellon <span class="emoji">&#127817;</span></li></i>
+</ul>
+</li>
+</ol>
+</div>
+<div class="image-section">
+<div class="image-container">
+<div class="coffee-placeholder">☕</div>
+</div>
+</div>
+</div>
+</body>
+</html>
